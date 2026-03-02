@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hey you 🤭</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#ffe6f2;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.box{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 0 15px rgba(0,0,0,0.2);
+}
+
+button{
+    margin:10px;
+    padding:10px 18px;
+    border:none;
+    border-radius:12px;
+    font-size:16px;
+}
+
+#yes{
+    background:#ff66a3;
+    color:white;
+}
+
+#no{
+    background:#ccc;
+    position:relative;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+<h2>Hey, I have a question 🤭</h2>
+<p>Will you be my Valentine?</p>
+
+<button id="yes" onclick="alert('You made me smile 😊')">Yes 💕</button>
+<button id="no" onmouseover="moveButton()">No 😏</button>
+</div>
+
+<script>
+function moveButton(){
+    let btn = document.getElementById("no");
+    let x = Math.random()*200 - 100;
+    let y = Math.random()*100 - 50;
+    btn.style.transform = `translate(${x}px,${y}px)`;
+}
+</script>
+
+</body>
+</html>
